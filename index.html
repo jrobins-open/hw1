@@ -1,0 +1,90 @@
+<html>
+<!-- Documentation: visited w3schools to learn basic HTML form options. All code was hand written but I had to refresh how old 90's era HTML inputs work!-->
+<body style="h2.color:blue">
+<div id="total" style="background:grey">
+    <div id="header" style="background:lightblue"><h2 style="text-align:center">Individual Computer Competency Survey</h2></div>
+    <div id="main" style="background:lightgreen; text-align:center; height:70%">
+        <div id="intro" ><h1>Introduction</h1><h2 style="padding:50px">Welcome to the individual computer competency survey. The purpose of this survey is to obtain information to be used in a future server and at this time is only meant for humor and bad web design concepts.</h2>
+            <button style="font-size:36" id="introbutton" >Start</button><br><br>
+        </div>
+        
+        <div id="summary"><h2 style="padding:25px">Thank you for your time. Your answers are displayed below. Feel free to go back to any of the questions to edit your answers. Please click the "submit" button when you are ready to submit.</h2>
+            <button style="font-size:36" id="submitbutton" >Submit</button><br><br>
+            <h3 id="resulttext"></h3>
+        </div>
+        <div id="q1"><h1>Question 1</h1><h2>Please enter your first and last name:<input type="text" id="name" value="" ></input></h2>
+            <button id="q1button" style="font-size:28">Save</button>
+        </div>
+        <div id="q2"><h1>Question 2</h1><h2 id="q2readback">Please rate your coding skills:</h2>
+           <h3> <form id="codingskills">
+                <input type="radio"  name="codeskill" value="Beginner" onclick="codeaction(this);">Beginner<br>
+                <input type="radio"  name="codeskill" value="Novice"  onclick="codeaction(this);">Novice<br>
+                <input type="radio"  name="codeskill" value="Intermediate"  onclick="codeaction(this);">Intermediate<br>
+                <input type="radio"  name="codeskill" value="Skilled" onclick="codeaction(this);">Skilled<br>
+                <input type="radio"  name="codeskill" value="Expert" onclick="codeaction(this);">Expert<br>
+                <input type="radio"  name="codeskill" value="Linus" onclick="codeaction(this);">Linus<br>
+                <input type="radio"  name="codeskill" value="Sam" onclick="codeaction(this);">Sam<br>
+            </form></h3>
+            <button id="q2button" style="font-size:28">Save</button>
+        </div>
+        <div id="q3"><h1>Question 3</h1><h2 id="q3readback">Please rate your computer hacking skills:</h2>
+            <h3><form id="hackingskills">
+                <input type="radio" name="hackingskill" value="N00b" onclick="codeaction(this);">N00b<br>
+                <input type="radio" name="hackingskill" value="Script Kiddy" onclick="codeaction(this);">Script Kiddy<br>
+                <input type="radio" name="hackingskill" value="Sk1llz" onclick="codeaction(this);">Sk1llz<br>
+                <input type="radio" name="hackingskill" value="H@x0r" onclick="codeaction(this);">H@x0r<br>
+                <input type="radio" name="hackingskill" value="31337" onclick="codeaction(this);">31337<br>
+                <input type="radio" name="hackingskill" value="Ub3r-31337" onclick="codeaction(this);">Ub3r-31337<br>
+                <input type="radio" name="hackingskill" value="John" onclick="codeaction(this);">John<br>
+            </form></h3>
+            <button id="q3button" style="font-size:28" >Save</button>
+        </div>
+        <div id="q4"><h1>Question 4</h1><h2 id="q4readback">Please fill out the following questions for invasive demographic information:</h2><br>
+            <h3>Please write your favorite sentence in the text box below:</h3><textarea id="sentence" rows="4" cols="80"></textarea>
+            <h3>How big do you want the text on the header: ?
+                <form>
+                    <select id="textsize" onclick="changetextsize(this);">
+                        <option value="14">Small (14 px)</option>
+                        <option value="20">Medium (20 px)</option>
+                        <option value="30">Large (30 px)</option>
+                        <option value="48">Huge (48 px)</option>
+                </select></form></h3>  
+            <h3>What is your favorite color (it will change the text):
+                <form >
+                    <select id="textcolor" onclick="changetextcolor(this);">
+                        <option value="Black" >Black</option>
+                        <option value="Red" >Red</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Green">Green</option>
+                        <option value="Brown">Brown</option>
+                        <option value="White">White</option>
+                </select></form>
+            </h3>
+            <button id="q4button" style="font-size:28" onclick="writestuff(this)">Save</button>
+            <p id="wellthisisembarrasing"></p>
+        </div>
+        <div id="q5"><h1>Question 5</h1><h2>Feel free to play the game below (or skip if you do not want to)</h2>
+            <h3>How many clicks can you perform in five seconds?</h3>
+            <p id="extraspacing"></p>
+            <button id="gamebutton" onclick="game();" style="font-size:28">Start!</button>
+            <h3 id="timertext"></h3>
+            <h3 id="clicks"></h3>
+            <button id="q5button" style="font-size:28" >Move on</button>
+ 
+        </div>
+        <div id="results"></div> 
+    </div>
+    <div id="progressbar" style="background:white; text-align:center; vertical-align:middle">Progress:  
+            <button id="introprogress">---Intro---</button>
+            <button id="q1progress">---1---</button>
+            <button id="q2progress">---2---</button>
+            <button id="q3progress">---3---</button>
+            <button id="q4progress">---4---</button>
+            <button id="q5progress">---5---</button>
+            <button id="summaryprogress">---Review---</button>
+        </div>
+    <div id="footer" style="background:lightgrey"><h2 style="text-align:center">© Joseph Robinson 2019 --- HW1 Submission --- 1.125 </h2></div>
+</div>
+<script src='surveys.js'></script>
+</body>
+</html>
